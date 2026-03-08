@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Manrope, Lora, Geist } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/ThemeProvider";
+import SmoothScroll from "@/components/SmoothScroll";
+import { ThemeToggle } from "@/components/ThemeToggle";
+import { cn } from "@/lib/utils";
 
-const inter = Inter({
-  variable: "--font-sans",
-  subsets: ["latin"],
-});
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
-const playfair = Playfair_Display({
+const fontSerif = Lora({
   variable: "--font-serif",
   subsets: ["latin"],
 });
@@ -23,11 +24,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning className={cn("font-sans", geist.variable)}>
       <body
-        className={`${inter.variable} ${playfair.variable} antialiased bg-stone-50 text-stone-900 selection:bg-stone-900 selection:text-white`}
+        className={`${geist.variable} ${fontSerif.variable} antialiased bg-background text-foreground transition-colors duration-300 selection:bg-foreground selection:text-background`}
       >
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <SmoothScroll>
+            {children}
+            <ThemeToggle />
+          </SmoothScroll>
+        </ThemeProvider>
       </body>
     </html>
   );

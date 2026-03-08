@@ -46,7 +46,7 @@ export default function ProjectGrid() {
                                         sizes="(max-width: 768px) 100vw, 50vw"
                                     />
                                 </div>
-                                <h3 className="text-2xl font-serif font-medium mb-2 group-hover:underline decoration-1 underline-offset-4">
+                                <h3 className="text-2xl font-sans font-bold mb-2 group-hover:underline decoration-1 underline-offset-4">
                                     {project.title}
                                 </h3>
                                 <p className="text-sm text-gray-500 font-mono uppercase tracking-wider">
