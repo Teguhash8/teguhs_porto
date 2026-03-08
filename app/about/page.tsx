@@ -84,7 +84,7 @@ export default function About() {
                     >
                         <div className="aspect-[3/4] bg-[#111] relative overflow-hidden rounded-sm grayscale hover:grayscale-0 transition-all duration-700">
                             <Image
-                                src="/assets/profile/21212.png"
+                                src="/assets/profile/21212.PNG"
                                 alt="Teguh S. Ashidiqie"
                                 fill
                                 className="object-cover"
