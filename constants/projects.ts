@@ -19,9 +19,9 @@ export const projects: Project[] = [
         year: "2026",
         description: "A public dashboard for digital correspondence tracking and management.",
         longDescription: "A comprehensive dashboard designed for tracking digital correspondence in a public office setting. It provides real-time updates, status tracking, and efficient management of incoming and outgoing letters.",
-        image: "/assets/projects/screencapture-192-168-100-10-surat-digital-public-dashboard-2026-02-18-11_20_19.png",
+        image: "/assets/projects/Eoffice/screencapture-192-168-100-10-surat-digital-public-dashboard-2026-02-18-11_20_19.png",
         screenshots: [
-            "/assets/projects/screencapture-192-168-100-10-surat-digital-public-dashboard-2026-02-18-11_20_19.png"
+            "/assets/projects/Eoffice/screencapture-192-168-100-10-surat-digital-public-dashboard-2026-02-18-11_20_19.png"
         ],
         technologies: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
         features: ["Real-time Dashboard", "Digital Correspondence Tracking", "Status Management", "Public View Interface"]

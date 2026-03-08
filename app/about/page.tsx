@@ -6,12 +6,12 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 
 const skills = [
-    { name: "React / Next.js", level: 95 },
+    { name: "React / Next.js", level: 90 },
     { name: "TypeScript", level: 90 },
     { name: "Tailwind CSS", level: 95 },
     { name: "Framer Motion / GSAP", level: 85 },
     { name: "UI/UX Design", level: 90 },
-    { name: "Node.js / Express", level: 80 },
+    { name: "Figma", level: 90 },
 ];
 
 const experiences = [
@@ -84,7 +84,7 @@ export default function About() {
                     >
                         <div className="aspect-[3/4] bg-[#111] relative overflow-hidden rounded-sm grayscale hover:grayscale-0 transition-all duration-700">
                             <Image
-                                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800"
+                                src="/assets/profile/21212.png"
                                 alt="Teguh S. Ashidiqie"
                                 fill
                                 className="object-cover"
@@ -241,7 +241,7 @@ export default function About() {
                         <h3 className="text-sm font-sans font-medium uppercase tracking-[0.2em] text-white/30 mb-8">Education</h3>
                         <ul className="space-y-4">
                             {[
-                                { title: "BSc Computer Science", sub: "University of Technology" },
+                                { title: "Informatics Engineering", sub: "Nusa Nipa University" },
                                 { title: "BFA Graphic Design", sub: "Design Academy" },
                                 { title: "UX Design Certificate", sub: "Google / Coursera" },
                             ].map((item, i) => (
