@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Manrope, Lora, Geist } from "next/font/google";
+import { Lora, Geist } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import SmoothScroll from "@/components/SmoothScroll";
-import { ThemeToggle } from "@/components/ThemeToggle";
+
 import { cn } from "@/lib/utils";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const geist = Geist({ subsets: ['latin'], variable: '--font-sans' });
 
 const fontSerif = Lora({
   variable: "--font-serif",
@@ -36,7 +36,7 @@ export default function RootLayout({
         >
           <SmoothScroll>
             {children}
-            <ThemeToggle />
+
           </SmoothScroll>
         </ThemeProvider>
       </body>

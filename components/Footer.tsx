@@ -53,10 +53,10 @@ export default function Footer() {
                         >
                             <span className="relative overflow-hidden">
                                 <span className="block group-hover:-translate-y-full transition-transform duration-500 ease-[0.16,1,0.3,1]">
-                                    hello@vibecoder.dev
+                                    teguhashidiqie@gmail.com
                                 </span>
                                 <span className="block absolute inset-0 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[0.16,1,0.3,1] text-lime-400">
-                                    hello@vibecoder.dev
+                                    teguhashidiqie@gmail.com
                                 </span>
                             </span>
                             <span className="group-hover:translate-x-2 transition-transform duration-300">→</span>

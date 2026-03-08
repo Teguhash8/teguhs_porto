@@ -57,7 +57,7 @@ export default function Introduction() {
                         className="lg:col-span-3"
                     >
                         <h2 className="text-base md:text-lg font-sans font-medium text-white/80">
-                            Our philosophy
+                            Philosophy
                         </h2>
                     </motion.div>
 

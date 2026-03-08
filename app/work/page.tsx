@@ -12,81 +12,85 @@ export default function Work() {
         <main className="bg-[#050505] min-h-screen text-[#F5F5F7]">
             <Header />
 
-            {/* Hero */}
-            <section className="pt-40 pb-12 px-6 md:px-12">
-                <div className="max-w-7xl mx-auto">
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
+            {/* Hero — Light Section (matching Services page style) */}
+            <section className="bg-[#F5F5F7] text-[#0A0A0A] pt-40 pb-0">
+                <div className="max-w-7xl mx-auto px-6 md:px-12">
+                    {/* Large Heading */}
+                    <motion.h1
+                        initial={{ opacity: 0, y: 40 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
-                        className="text-sm font-sans font-medium uppercase tracking-[0.3em] text-white/40 mb-6"
+                        transition={{ duration: 1 }}
+                        className="text-5xl md:text-7xl lg:text-[5.5rem] font-sans font-bold tracking-tight leading-[1.05] mb-16 max-w-5xl"
                     >
-                        Portfolio
-                    </motion.p>
-                    <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
-                        <motion.h1
-                            initial={{ opacity: 0, y: 40 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 1, delay: 0.1 }}
-                            className="text-6xl md:text-8xl lg:text-9xl font-sans font-bold tracking-tighter uppercase leading-[0.9]"
-                        >
-                            Selected<br />Work
-                        </motion.h1>
-                        <motion.p
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ duration: 1, delay: 0.3 }}
-                            className="max-w-md text-base font-sans font-light text-white/50 leading-relaxed lg:pb-4"
-                        >
-                            Every project we deliver is a reflection of our commitment to quality, designed to inspire and drive success.
-                        </motion.p>
-                    </div>
+                        Work built with precision, passion and purpose.
+                    </motion.h1>
+
+                    {/* Bottom metadata row */}
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.8, delay: 0.4 }}
+                        className="flex items-center justify-between pb-8 border-b border-[#0A0A0A]/10"
+                    >
+                        <span className="text-sm font-sans font-medium text-[#0A0A0A]/50 tracking-wide">
+                            Selected Projects
+                        </span>
+                        <span className="text-sm font-sans font-medium text-[#0A0A0A]/50 tracking-wide">
+                            2024 — Present
+                        </span>
+                    </motion.div>
                 </div>
+
+                {/* Wide Cinematic Image */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1.2, delay: 0.3 }}
+                    className="w-full mt-0 relative overflow-hidden"
+                    style={{ height: 'clamp(300px, 50vw, 600px)' }}
+                >
+                    <Image
+                        src="/assets/Pict/Ethereal Cityscape Glow.png"
+                        alt="Creative work showcase"
+                        fill
+                        className="object-cover"
+                        sizes="100vw"
+                        priority
+                    />
+                </motion.div>
             </section>
 
-            {/* Filter Tags */}
-            <section className="px-6 md:px-12 pb-16">
+            {/* Recent Projects */}
+            <section className="px-6 md:px-12 pt-24 pb-8">
                 <div className="max-w-7xl mx-auto">
-                    <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.4 }}
-                        className="flex flex-wrap gap-3 text-sm font-sans font-medium"
+                    <motion.h2
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                        className="text-3xl md:text-4xl font-serif italic font-normal text-white/80 mb-16"
                     >
-                        {["All", "Web Development", "Web App", "Web Design", "Cultural Heritage"].map((tag, i) => (
-                            <span
-                                key={i}
-                                className={`px-4 py-2 rounded-full border transition-colors cursor-pointer ${i === 0
-                                    ? "bg-white text-black border-white"
-                                    : "border-white/20 text-white/60 hover:text-white hover:border-white/50"
-                                    }`}
-                            >
-                                {tag}
-                            </span>
-                        ))}
-                    </motion.div>
+                        Recent Projects
+                    </motion.h2>
                 </div>
             </section>
 
             {/* Projects Grid */}
-            <section className="px-6 md:px-12 pb-24">
+            <section className="px-6 md:px-12 pb-32">
                 <div className="max-w-7xl mx-auto">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-20">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-20">
                         {projects.map((project, index) => (
                             <Link href={`/work/${project.id}`} key={project.id} passHref>
                                 <motion.div
                                     initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true, margin: "-50px" }}
-                                    transition={{ delay: (index % 2) * 0.1, duration: 0.8 }}
+                                    transition={{ delay: (index % 2) * 0.15, duration: 0.8 }}
                                     className="group cursor-pointer"
                                 >
                                     {/* Image */}
-                                    <div className="aspect-[16/10] bg-[#111] mb-6 relative overflow-hidden rounded-sm">
+                                    <div className="aspect-[4/3] bg-[#111] mb-5 relative overflow-hidden">
                                         <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-500 z-10" />
-                                        <div className="absolute top-4 right-4 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                            <span className="text-xs font-sans font-medium bg-lime-400 text-black px-3 py-1 rounded-full">↗</span>
-                                        </div>
                                         <Image
                                             src={project.image}
                                             alt={project.title}
@@ -96,26 +100,14 @@ export default function Work() {
                                         />
                                     </div>
 
-                                    {/* Title + Year */}
-                                    <div className="flex justify-between items-baseline mb-2">
-                                        <h3 className="text-xl md:text-2xl font-sans font-bold tracking-tight group-hover:text-lime-400 transition-colors duration-300">
+                                    {/* Title + Category */}
+                                    <div className="mt-4">
+                                        <h3 className="text-lg md:text-xl font-sans font-bold tracking-tight mb-1 group-hover:text-white transition-colors duration-300">
                                             {project.title}
                                         </h3>
-                                        <span className="text-white/30 font-sans text-sm font-medium">{project.year}</span>
-                                    </div>
-
-                                    {/* Description */}
-                                    <p className="text-sm font-sans text-white/50 leading-relaxed mb-3 max-w-md">
-                                        {project.description}
-                                    </p>
-
-                                    {/* Tags */}
-                                    <div className="flex flex-wrap gap-2">
-                                        {project.category.split(", ").map((tag, i) => (
-                                            <span key={i} className="text-xs font-sans font-medium uppercase tracking-wider text-white/30 border border-white/10 px-2 py-1 rounded-sm">
-                                                {tag}
-                                            </span>
-                                        ))}
+                                        <p className="text-sm font-sans text-white/40">
+                                            {project.category}
+                                        </p>
                                     </div>
                                 </motion.div>
                             </Link>
@@ -153,3 +145,4 @@ export default function Work() {
         </main>
     );
 }
+

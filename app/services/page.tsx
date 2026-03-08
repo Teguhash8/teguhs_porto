@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Image from "next/image";
+import Link from "next/link";
 
 const services = [
     {
@@ -56,34 +57,52 @@ export default function ServicesPage() {
         <main className="bg-[#050505] min-h-screen text-[#F5F5F7]">
             <Header />
 
-            {/* Hero */}
-            <section className="pt-40 pb-20 px-6 md:px-12">
-                <div className="max-w-7xl mx-auto">
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
-                        className="text-sm font-sans font-medium uppercase tracking-[0.3em] text-white/40 mb-6"
-                    >
-                        What I Do
-                    </motion.p>
+            {/* Hero — Light Section */}
+            <section className="bg-[#F5F5F7] text-[#0A0A0A] pt-40 pb-0">
+                <div className="max-w-7xl mx-auto px-6 md:px-12">
+                    {/* Large Heading */}
                     <motion.h1
                         initial={{ opacity: 0, y: 40 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1, delay: 0.1 }}
-                        className="text-6xl md:text-8xl lg:text-9xl font-sans font-bold tracking-tighter mb-8 uppercase leading-[0.9]"
+                        transition={{ duration: 1 }}
+                        className="text-5xl md:text-7xl lg:text-[5.5rem] font-sans font-bold tracking-tight leading-[1.05] mb-16 max-w-5xl"
                     >
-                        Capabilities
+                        Designing purposeful digital experiences through craft, code and intention.
                     </motion.h1>
-                    <motion.p
+
+                    {/* Bottom metadata row */}
+                    <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ duration: 1, delay: 0.3 }}
-                        className="max-w-lg text-lg font-sans font-light text-white/50 leading-relaxed"
+                        transition={{ duration: 0.8, delay: 0.4 }}
+                        className="flex items-center justify-between pb-8 border-b border-[#0A0A0A]/10"
                     >
-                        Every project we deliver is a reflection of our commitment to quality, designed to inspire and drive success.
-                    </motion.p>
+                        <span className="text-sm font-sans font-medium text-[#0A0A0A]/50 tracking-wide">
+                            2025
+                        </span>
+                        <span className="text-sm font-sans font-medium text-[#0A0A0A]/50 tracking-wide">
+                            Creative Development Studio
+                        </span>
+                    </motion.div>
                 </div>
+
+                {/* Wide Cinematic Image */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1.2, delay: 0.3 }}
+                    className="w-full mt-0 relative overflow-hidden"
+                    style={{ height: 'clamp(300px, 50vw, 600px)' }}
+                >
+                    <Image
+                        src="/assets/Pict/Artistic Motion Portrait (1).png"
+                        alt="Creative process"
+                        fill
+                        className="object-cover"
+                        sizes="100vw"
+                        priority
+                    />
+                </motion.div>
             </section>
 
             {/* Services List */}
@@ -150,9 +169,9 @@ export default function ServicesPage() {
                             <p className="text-base font-sans font-light text-white/50 leading-relaxed max-w-sm">
                                 Teguhash Studio brings your vision to life with stunning designs that reverberate through time, creating waves of creativity and success for your brand.
                             </p>
-                            <a href="/contact" className="inline-flex items-center gap-2 mt-8 border border-white/20 rounded-full px-5 py-2 text-sm font-sans font-medium hover:bg-white hover:text-black transition-colors duration-300">
+                            <Link href="/contact" className="inline-flex items-center gap-2 mt-8 border border-white/20 rounded-full px-5 py-2 text-sm font-sans font-medium hover:bg-white hover:text-black transition-colors duration-300">
                                 Let&apos;s discuss <span>↗</span>
-                            </a>
+                            </Link>
                         </div>
                         <div className="lg:col-span-7">
                             {clients.map((client, index) => (
@@ -222,9 +241,9 @@ export default function ServicesPage() {
                         <p className="max-w-sm text-sm font-sans text-white/50 leading-relaxed text-left lg:text-right">
                             As a front end developer using modern ideas, simplicity design and universal visual identification tailored to dedicated and current market.
                         </p>
-                        <a href="/work" className="inline-flex items-center gap-2 border border-white/20 rounded-full px-5 py-2 text-sm font-sans font-medium hover:bg-white hover:text-black transition-colors duration-300">
+                        <Link href="/work" className="inline-flex items-center gap-2 border border-white/20 rounded-full px-5 py-2 text-sm font-sans font-medium hover:bg-white hover:text-black transition-colors duration-300">
                             Let&apos;s discuss <span>↗</span>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </section>
