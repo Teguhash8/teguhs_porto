@@ -26,7 +26,7 @@ export default function Introduction() {
                 <div
                     className="absolute inset-0"
                     style={{
-                        backgroundImage: 'url("/assets/Pict/Artistic Motion Portrait (1).png")',
+                        backgroundImage: 'url("/assets/Pict/Artistic Motion Portrait (1).webp")',
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                     }}

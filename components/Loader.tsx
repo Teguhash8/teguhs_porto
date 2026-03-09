@@ -4,13 +4,13 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const stackImages = [
-    "/assets/Pict/Abstract Glowing Pattern.png",
-    "/assets/Pict/Abstract Web Network.png",
-    "/assets/Pict/Dot Matrix Figure.png",
-    "/assets/Pict/Egrets in Flight.png",
-    "/assets/Pict/Ethereal Cityscape Glow.png",
-    "/assets/Pict/Surreal Character Art.png",
-    "/assets/Pict/Surreal Ocean Portal.png",
+    "/assets/Pict/Abstract Glowing Pattern.webp",
+    "/assets/Pict/Abstract Web Network.webp",
+    "/assets/Pict/Dot Matrix Figure.webp",
+    "/assets/Pict/Egrets in Flight.webp",
+    "/assets/Pict/Ethereal Cityscape Glow.webp",
+    "/assets/Pict/Surreal Character Art.webp",
+    "/assets/Pict/Surreal Ocean Portal.webp",
 ];
 
 interface LoaderProps {

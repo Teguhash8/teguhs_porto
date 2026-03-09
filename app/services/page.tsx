@@ -95,7 +95,7 @@ export default function ServicesPage() {
                     style={{ height: 'clamp(300px, 50vw, 600px)' }}
                 >
                     <Image
-                        src="/assets/Pict/Artistic Motion Portrait (1).png"
+                        src="/assets/Pict/Artistic Motion Portrait (1).webp"
                         alt="Creative process"
                         fill
                         className="object-cover"

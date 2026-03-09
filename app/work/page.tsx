@@ -50,7 +50,7 @@ export default function Work() {
                     style={{ height: 'clamp(300px, 50vw, 600px)' }}
                 >
                     <Image
-                        src="/assets/Pict/Ethereal Cityscape Glow.png"
+                        src="/assets/Pict/Ethereal Cityscape Glow.webp"
                         alt="Creative work showcase"
                         fill
                         className="object-cover"
